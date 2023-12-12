@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criminal Minds</title> 
+    <link  rel="stylesheet" href="css/stylecs.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        section{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            animation: back 10s ease infinite;
+        }
+        @keyframes back{
+            0%{background: rgb(129, 32, 116);}
+            25%{background: rgb(88, 22, 79);}
+            50%{background: rgb(41, 10, 36);}
+            75%{background: rgb(88, 22, 79);}
+            100%{background: rgb(129, 32, 116);}
+        }
+        .blob{
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            background-color: rgb(197, 51, 177);
+            border-radius: 250px 250px 250px 250px;
+        }
+        .head{
+            font-size: 40px;
+            color: black;
+            font-weight: bold;
+            text-overflow: clip;
+            position: relative;
+        }
+        h1{   
+            color: black;
+            position: relative;
+            z-index: 1;
+        }
+        h1::before,h1::after{
+            content: '';
+            padding: 45px;
+            position: absolute;
+            left: 0%;
+            top: 50%;
+            display: block;
+            transition: translateX(-50%) translateY(-50%) rotate(0);
+            animation: spin 10s alternate infinite ease-in-out;
+        }
+        h1::before{
+            border-top: 15px dashed rgb(102 182 178);
+            border-left: 15px dashed rgb(102 182 178);
+            z-index: -1;
+        }
+        h1::after{
+            border-bottom: 15px dashed rgb(102 182 178);
+            border-right: 15px dashed rgb(102 182 178);
+            z-index: -1;
+        }
+        @keyframes spin{
+            100%{
+                transform: translateX(-50%) translateY(-50%) rotate(800deg);
+            }
+        }
+        .head a{        
+            color: rgb(85, 34, 134);
+            text-decoration: none;
+        }
+        .head a:hover{
+            color: rgb(166, 71, 254);
+        }
+        .tip{
+            text-align: center;
+            float: right;
+            margin-top: 280px;
+            margin-right: 5px;
+            color: rgb(65, 21, 60);
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="head">
+            <h1><a href="reviews.html">C</a>r<a href="introduction.html">i</a><a href="highlights.html">m</a>inal <a href="profile.html">M</a>inds</h1>
+        </div>
+        <div class="blob">
+            <div class="tip">
+                If you want to dig deeper,please click the character
+            </div>
+        </div>    
+    </section>
+</body>
+</html>
